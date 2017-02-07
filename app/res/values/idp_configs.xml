@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    This contains the authorization service configuration details that are used to demonstrate
+    authentication. By default, all authorization services are disabled until you modify this file
+    to provide your own configuration details.
+    -->
+    <eat-comment/>
+
+    <bool name="google_enabled">false</bool>
+    <string name="google_client_id" translatable="false">512695120055-grrsu51ootdgtqmcl5th01dulibifs7b.apps.googleusercontent.com</string>
+    <!--
+    NOTE: This scheme is automatically provisioned by Google for Android OAuth2 clients, and is
+    the reverse form of the client ID registered above. Handling of this scheme is registered in an
+    intent filter in the app's manifest.
+    -->
+    <string name="google_auth_redirect_uri" translatable="false">com.googleusercontent.apps.512695120055-grrsu51ootdgtqmcl5th01dulibifs7b:/oauth2redirect</string>
+
+    <bool name="b2c_enabled">true</bool>
+    <string name="b2c_client_id" translatable="false">247ab8fa-0a64-4c5a-a788-0d5f039638bb</string>
+    <!--
+    NOTE: This scheme is automatically provisioned by B2C.
+    -->
+    <string name="b2c_auth_redirect_uri" translatable="false">https://login.microsoftonline.com/tfp/oauth2/nativeclient</string>
+
+    <string name="b2c_discovery_uri" translatable="false">https://login.microsoftonline.com/parakhDirectory.onmicrosoft.com/v2.0/.well-known/openid-configuration/</string>
+
+    <string name="b2c_authorize_uri" translatable="false">https://login.microsoftonline.com/tfp/parakhDirectory.onmicrosoft.com/B2C_1_SiUpIn/oauth2/v2.0/authorize</string>
+
+    <string name="b2c_token_uri" translatable="false">https://login.microsoftonline.com/tfp/parakhDirectory.onmicrosoft.com/B2C_1_SiUpIn/oauth2/v2.0/token</string>
+
+    <string name="b2c_scope_string" translatable="false">openid profile </string>
+
+</resources>
