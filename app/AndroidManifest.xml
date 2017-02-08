@@ -62,12 +62,13 @@
 
         To the list of attributes on the activity element.
         -->
-        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
+        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            tools:node="replace">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="https"
+                <data android:scheme="https" 
                   android:host="login.microsoftonline.com"
                   android:path="/tfp/oauth2/nativeclient"/>
             </intent-filter>
