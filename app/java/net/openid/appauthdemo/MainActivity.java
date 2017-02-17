@@ -48,7 +48,9 @@ import net.openid.appauth.browser.ExactBrowserMatcher;
 import net.openid.appauthdemo.BrowserSelectionAdapter.BrowserInfo;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Demonstrates the usage of the AppAuth library to connect to a set of pre-configured
@@ -185,6 +187,11 @@ public class MainActivity extends AppCompatActivity {
             loginHint = null;
         }
 
+        Map<String, String> additionalParams = new HashMap<String, String>();
+
+        //additionalParams.put("p", "Policy_name");
+        additionalParams.put("slice", "001-001");
+
         AuthorizationRequest authRequest = new AuthorizationRequest.Builder(
                 serviceConfig,
                 idp.getClientId(),
@@ -192,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
                 idp.getRedirectUri())
                 .setScope(idp.getScope())
                 .setLoginHint(loginHint)
+                .setAdditionalParameters(additionalParams)
                 .build();
 
         Log.d(TAG, "Making auth request to " + serviceConfig.authorizationEndpoint);
